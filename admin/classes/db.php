@@ -27,7 +27,7 @@ class DB
     {       
         if ($this->cn)
         {
-            mysqli_query($this->cn, $sql);
+             mysqli_query($this->cn, $sql);
         }
     }
     // Hàm đếm số hàng

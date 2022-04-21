@@ -11,6 +11,12 @@ class Session {
 	{
 		$_SESSION['user'] = $user;
 	}
+
+	// Hàm tạo session
+	public function set($key, $value)
+	{
+		$_SESSION[$key] = $value;
+	}
 	// Hàm lấy dữ liệu session
 	public function get() 
 	{
@@ -24,6 +30,7 @@ class Session {
 		}
 		return $user;
 	}
+
 	// Hàm xoá session
 	public function destroy() 
 	{

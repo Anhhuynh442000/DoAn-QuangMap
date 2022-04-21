@@ -12,4 +12,4 @@ $history = "INSERT INTO history(user,usertype,action,data,date,time)
   VALUES('$user','$usertype','$action','$data','$date','$time')";
 $query_run = $db->query($history);
 $session->destroy();
-new Redirect("http://localhost:8080/k&q/"); // Trở về trang index
+new Redirect("https://quangmap.dev/DoAn-QuangMap/"); // Trở về trang index

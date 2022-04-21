@@ -9,6 +9,7 @@ if (isset($_POST['thanhtoan']) && isset($_POST['thanhtoan']) != "") {
   $ma_nv = trim(addslashes(htmlspecialchars($_POST['ma_nv'])));
   $ghi_chu = trim(addslashes(htmlspecialchars($_POST['ghichu'])));
   $id_lop = ($_POST['id_lop']);
+
   $count = count($_POST['id_lop']);
   $sotien = 0;
   $noidung = "Thu học phí học viên $username - Mã Học Viên: $user_code";
@@ -80,21 +81,37 @@ if (isset($_POST['thanhtoan']) && isset($_POST['thanhtoan']) != "") {
 // Thanh toán VNPay
 if(isset($_POST['thanhtoan_vnpay']))
 {
-  $hocphi = ($_POST['hocphi']);
-  $thanhtoan = ($_POST['check-thanhtoan']);
-  $sum = 0;
-  for($i=0; $i<count($thanhtoan); $i++)
-  {
-    if($thanhtoan[$i]==1)
-    {
+  $session = new Session();
+  $id_hv = $data_user['id'];
+  $ma_hv = trim(addslashes(htmlspecialchars($_POST['user_code'])));
+  $session->set('ma_hv', $ma_hv);
 
-      $sum +=$hocphi[$i];
-      // print_r($hocphi[$i]);
-      // print_r($sum."<br>");
+  if(isset($_POST['id_lop']))
+  {
+    $id_lop = $_POST['id_lop'];
+    print_r($id_lop);
+  }
+  else
+  {
+    $id_lop = array();
+    $sql = "SELECT * FROM `chi_tiet_lop_hoc` 
+    JOIN register On register.id = chi_tiet_lop_hoc.id_hs
+    JOIN lop_hoc On lop_hoc.id_lop = chi_tiet_lop_hoc.id_lop
+    Join trang_thai_lop on trang_thai_lop.id_ttl = lop_hoc.trangthailop
+    JOIN mon_hoc On mon_hoc.id_mon = lop_hoc.id_mh
+    where id_hs=$id_hv";
+    $data = $db->fetch_assoc($sql, 0);
+    foreach($data as $key=>$value)
+    {
+      if($value['thanhtoan']==1)
+      {
+        array_push($id_lop, $value['id_lop']);
+      }
     }
-  } 
-  echo("<pre>");
-  print_r($data_user);
-  // echo("<pre>");
-  // print_r($thanhtoan);
+    print_r($id_lop);
+  }
+
+
+  $session->set('id_lop', $id_lop);
+  new Redirect($_DOMAIN . 'thanhtoan_vpn');
 }

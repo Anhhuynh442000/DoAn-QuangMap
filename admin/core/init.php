@@ -10,7 +10,7 @@ $db->connect();
 $db->set_char('utf8');
  
 // Thông tin chung
-$_DOMAIN = 'http://localhost/DoAn-QuangMap/admin/';
+$_DOMAIN = 'https://quangmap.dev/DoAn-QuangMap/admin/';
  
 date_default_timezone_set('Asia/Ho_Chi_Minh'); 
 $date_current = '';

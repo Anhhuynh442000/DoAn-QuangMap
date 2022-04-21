@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
     <h1 class="h3 mb-2 text-gray-800">Thanh Toán Học Phí</h1>
     <?php
@@ -56,7 +57,8 @@
                             if ($db->num_rows($sql)) {
                                 $serial_number = 0;
                                 foreach ($db->fetch_assoc($sql, 0) as $key => $row) {
-
+                                   //echo("<pre>");
+                                   //print_r($db->fetch_assoc($sql, 0));
                                     $serial_number++;
 
                             ?>
@@ -74,7 +76,10 @@
                                                 }
                                             ?>
                                         </th>
-                                        <th><?php echo $row['MaLop']; ?></th>
+                                        <th><?php echo $row['MaLop']; ?>
+                                            <input type="hidden" name="user_code" value="<?php echo($row['user_code']);?>">
+                                        
+                                        </th>
                                         <td> <?php echo $row['ten_monhoc']; ?></td>
                                         <td> <?php echo $row['ngaydk']; ?></td>
                                         <td>

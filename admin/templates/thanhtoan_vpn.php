@@ -1,6 +1,7 @@
+
 <div class="container">
     <div class="header clearfix">
-        <h3 class="text-muted">VNPAY DEMO</h3>
+        <h3 class="text-muted">VNPAY</h3>
     </div>
     <h3>Tạo mới đơn hàng</h3>
     <div class="table-responsive">
@@ -148,7 +149,7 @@
                 <input class="form-control" id="txt_inv_mobile"
                        name="txt_inv_mobile" type="text" value="02437764668"/>
             </div>
-            <button type="submit" class="btn btn-primary" id="btnPopup">Thanh toán Post</button>
+       
             <button type="submit" name="redirect" id="redirect" class="btn btn-danger">Thanh toán Redirect</button>
 
         </form>
