@@ -40,7 +40,7 @@ $hoadon = "INSERT INTO
     `hoa_don`(`MaThu`, `SoTien`, `NoiDung`, `nv_thu`, `ma_nv`, `id_hs`) 
     VALUES ('$ma_thu',0,'$noidung','$ten_nv','$ma_nv','$id_hv')";
 //câu lệnh insert vào bảng chi tiết hoá đơn
-$id_hoadon = $db->fetch_assoc("SELECT id_hd FROM `hoa_don` ORDER BY hoa_don.id_hd DESC LIMIT 1 ", 1)['id_hd'];
+$id_hoadon ="(SELECT id_hd FROM `hoa_don` ORDER BY hoa_don.id_hd DESC LIMIT 1 )";
 // print_r($id_hoadon);
 #nếu hoá đơn chạy
 

@@ -9,7 +9,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 $vnp_TmnCode = "5QN0AXHN"; //Website ID in VNPAY System
 $vnp_HashSecret = "LSECZGVUJCQARUCITTDKSPGDKLMQCAPS"; //Secret key
 $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-$vnp_Returnurl = "http://localhost/DoAn-QuangMap/admin/vnpay_return.php";
+$vnp_Returnurl = "https://quangmap.dev/DoAn-QuangMap/admin/vnpay_return.php";
 $vnp_apiUrl = "http://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
 //Config input format
 //Expire
