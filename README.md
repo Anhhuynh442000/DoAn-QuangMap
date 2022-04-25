@@ -44,10 +44,6 @@ Get latest code at https://github.com/ndeet/unzipper
 [See contributors on Github](https://github.com/ndeet/unzipper/graphs/contributors)  
 
 ## Để chạy
-1. Cấu hình lại $_DOMAIN cả user và admin
-2. Bật command chạy composer install ở cả user và admin
-    Ví dụ: 
-        - Tại user: "C:\xampp\htdocs\DoAn-QuangMap" 
-            run command: composer install
-        - Tại admin: C:\xampp\htdocs\DoAn-QuangMap\admin
-            run command: composer install
+*1. Cấu hình lại $_DOMAIN cả user và admin
+*2. Đăng ký tài khoản demo VNPAY
+*3. Cấu hình file: admin/core/config.php . Lấy 2 key từ tài khoản đã đăng ký thành công

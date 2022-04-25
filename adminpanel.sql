@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 18, 2022 lúc 09:29 AM
--- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 7.4.27
+-- Host: 127.0.0.1
+-- Generation Time: Apr 24, 2022 at 05:34 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `adminpanel`
+-- Database: `adminpanel`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `bo_mon`
+-- Table structure for table `bo_mon`
 --
 
 CREATE TABLE `bo_mon` (
@@ -34,7 +34,7 @@ CREATE TABLE `bo_mon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `bo_mon`
+-- Dumping data for table `bo_mon`
 --
 
 INSERT INTO `bo_mon` (`id_bo_mon`, `ten_bomon`, `gioithieu_bm`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `bo_mon` (`id_bo_mon`, `ten_bomon`, `gioithieu_bm`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ca_hoc`
+-- Table structure for table `ca_hoc`
 --
 
 CREATE TABLE `ca_hoc` (
@@ -57,7 +57,7 @@ CREATE TABLE `ca_hoc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ca_hoc`
+-- Dumping data for table `ca_hoc`
 --
 
 INSERT INTO `ca_hoc` (`id_ca`, `ten_ca`, `chitiet_ca`) VALUES
@@ -77,7 +77,7 @@ INSERT INTO `ca_hoc` (`id_ca`, `ten_ca`, `chitiet_ca`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chi_tiet_lop_hoc`
+-- Table structure for table `chi_tiet_lop_hoc`
 --
 
 CREATE TABLE `chi_tiet_lop_hoc` (
@@ -90,7 +90,7 @@ CREATE TABLE `chi_tiet_lop_hoc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `chi_tiet_lop_hoc`
+-- Dumping data for table `chi_tiet_lop_hoc`
 --
 
 INSERT INTO `chi_tiet_lop_hoc` (`id_ct_lop`, `id_hs`, `id_lop`, `diem`, `thanhtoan`, `ngaydk`) VALUES
@@ -98,7 +98,7 @@ INSERT INTO `chi_tiet_lop_hoc` (`id_ct_lop`, `id_hs`, `id_lop`, `diem`, `thanhto
 (20, 55, 97, 10, 0, '2022-04-02'),
 (25, 82, 95, NULL, 1, '2022-04-06'),
 (26, 82, 96, NULL, 1, '2022-04-06'),
-(27, 84, 95, NULL, 1, '2022-04-09'),
+(27, 84, 95, NULL, 0, '2022-04-09'),
 (34, 54, 96, 1, 0, '2022-04-11'),
 (40, 54, 98, NULL, 0, '2022-04-11'),
 (41, 54, 93, NULL, 0, '2022-04-11'),
@@ -108,7 +108,7 @@ INSERT INTO `chi_tiet_lop_hoc` (`id_ct_lop`, `id_hs`, `id_lop`, `diem`, `thanhto
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chuc_vu`
+-- Table structure for table `chuc_vu`
 --
 
 CREATE TABLE `chuc_vu` (
@@ -117,7 +117,7 @@ CREATE TABLE `chuc_vu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `chuc_vu`
+-- Dumping data for table `chuc_vu`
 --
 
 INSERT INTO `chuc_vu` (`id_cv`, `TenChucVu`) VALUES
@@ -131,7 +131,7 @@ INSERT INTO `chuc_vu` (`id_cv`, `TenChucVu`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ct_gv`
+-- Table structure for table `ct_gv`
 --
 
 CREATE TABLE `ct_gv` (
@@ -141,7 +141,7 @@ CREATE TABLE `ct_gv` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ct_gv`
+-- Dumping data for table `ct_gv`
 --
 
 INSERT INTO `ct_gv` (`id_ctgv`, `id_gv`, `id_bo_mon`) VALUES
@@ -154,7 +154,7 @@ INSERT INTO `ct_gv` (`id_ctgv`, `id_gv`, `id_bo_mon`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `gioi_thieu`
+-- Table structure for table `gioi_thieu`
 --
 
 CREATE TABLE `gioi_thieu` (
@@ -163,7 +163,7 @@ CREATE TABLE `gioi_thieu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `gioi_thieu`
+-- Dumping data for table `gioi_thieu`
 --
 
 INSERT INTO `gioi_thieu` (`id`, `Content`) VALUES
@@ -172,7 +172,7 @@ INSERT INTO `gioi_thieu` (`id`, `Content`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `gio_thi`
+-- Table structure for table `gio_thi`
 --
 
 CREATE TABLE `gio_thi` (
@@ -181,7 +181,7 @@ CREATE TABLE `gio_thi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `gio_thi`
+-- Dumping data for table `gio_thi`
 --
 
 INSERT INTO `gio_thi` (`id_giothi`, `gio_thi`) VALUES
@@ -194,7 +194,7 @@ INSERT INTO `gio_thi` (`id_giothi`, `gio_thi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `history`
+-- Table structure for table `history`
 --
 
 CREATE TABLE `history` (
@@ -208,7 +208,7 @@ CREATE TABLE `history` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `history`
+-- Dumping data for table `history`
 --
 
 INSERT INTO `history` (`id`, `user`, `usertype`, `action`, `data`, `date`, `time`) VALUES
@@ -1076,12 +1076,24 @@ INSERT INTO `history` (`id`, `user`, `usertype`, `action`, `data`, `date`, `time
 (885, 'Hồ Phạm Kim Thy', 4, 1, '', '17-04-2022', '07:18:12'),
 (886, 'Hồ Phạm Kim Thy', 4, 2, '', '17-04-2022', '07:24:01'),
 (887, 'Hồng Quân', 6, 1, '', '17-04-2022', '07:24:04'),
-(888, 'Hồng Quân', 6, 3, 'Học Viên Đăng Ký Khoá Học', '17-04-2022', '07:41:57');
+(888, 'Hồng Quân', 6, 3, 'Học Viên Đăng Ký Khoá Học', '17-04-2022', '07:41:57'),
+(889, '', 0, 2, '', '19-04-2022', '19:26:24'),
+(890, 'Kim Chi', 6, 1, '', '19-04-2022', '19:35:31'),
+(891, 'Kim Chi', 6, 1, '', '19-04-2022', '22:41:12'),
+(892, 'Kim Chi', 6, 1, '', '21-04-2022', '13:12:10'),
+(893, 'Kim Chi', 6, 1, '', '21-04-2022', '13:13:13'),
+(894, 'Kim Chi', 6, 2, '', '21-04-2022', '16:36:33'),
+(895, 'Kim Chi', 6, 1, '', '21-04-2022', '16:36:40'),
+(896, 'Kim Chi', 6, 2, '', '21-04-2022', '16:36:54'),
+(897, 'Kim Chi', 6, 2, '', '21-04-2022', '16:37:04'),
+(898, 'Kim Chi', 6, 1, '', '21-04-2022', '16:37:07'),
+(899, 'Kim Chi', 6, 1, '', '21-04-2022', '16:37:16'),
+(900, 'Kim Chi', 6, 1, '', '23-04-2022', '14:17:27');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `history_action`
+-- Table structure for table `history_action`
 --
 
 CREATE TABLE `history_action` (
@@ -1090,7 +1102,7 @@ CREATE TABLE `history_action` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `history_action`
+-- Dumping data for table `history_action`
 --
 
 INSERT INTO `history_action` (`id_act`, `action_name`) VALUES
@@ -1106,7 +1118,7 @@ INSERT INTO `history_action` (`id_act`, `action_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hoa_don`
+-- Table structure for table `hoa_don`
 --
 
 CREATE TABLE `hoa_don` (
@@ -1121,17 +1133,16 @@ CREATE TABLE `hoa_don` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `hoa_don`
+-- Dumping data for table `hoa_don`
 --
 
 INSERT INTO `hoa_don` (`id_hd`, `MaThu`, `NgayThang`, `SoTien`, `NoiDung`, `id_hs`, `nv_thu`, `ma_nv`) VALUES
-(77, '20220409_82', '2022-04-09', 7000000, 'Thu học phí học viên Kim Chi - Mã Học Viên: HV-8733059', 82, 'Hồ Phạm Kim Thy', 'NS-7654321'),
-(78, '20220409_84', '2022-04-09', 5000000, 'Thu học phí học viên Khang Hồ - Mã Học Viên: HV-1456518', 84, 'Hồ Phạm Kim Thy', 'NS-7654321');
+(105, '20220423_82', '2022-04-23', 7000000, 'Thu học phí học viên Kim Chi - Mã Học Viên: HV-8733059', 82, 'Thanh Toán Online', '');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hoa_don_ct`
+-- Table structure for table `hoa_don_ct`
 --
 
 CREATE TABLE `hoa_don_ct` (
@@ -1143,18 +1154,17 @@ CREATE TABLE `hoa_don_ct` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `hoa_don_ct`
+-- Dumping data for table `hoa_don_ct`
 --
 
 INSERT INTO `hoa_don_ct` (`id_cthd`, `ct_hocphi`, `ct_giamgia`, `id_lop_ct_hd`, `id_hoadon`) VALUES
-(39, '5000000', 0, 95, 77),
-(40, '2000000', 0, 96, 77),
-(41, '5000000', 0, 95, 78);
+(68, '5000000', 0, 95, 105),
+(69, '2000000', 0, 96, 105);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loai_tb`
+-- Table structure for table `loai_tb`
 --
 
 CREATE TABLE `loai_tb` (
@@ -1163,7 +1173,7 @@ CREATE TABLE `loai_tb` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `loai_tb`
+-- Dumping data for table `loai_tb`
 --
 
 INSERT INTO `loai_tb` (`id_loai_tb`, `ten_loai_tb`) VALUES
@@ -1173,7 +1183,7 @@ INSERT INTO `loai_tb` (`id_loai_tb`, `ten_loai_tb`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loai_thu_chi`
+-- Table structure for table `loai_thu_chi`
 --
 
 CREATE TABLE `loai_thu_chi` (
@@ -1183,7 +1193,7 @@ CREATE TABLE `loai_thu_chi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `loai_thu_chi`
+-- Dumping data for table `loai_thu_chi`
 --
 
 INSERT INTO `loai_thu_chi` (`id_loaithuchi`, `Loai`, `TenLoai`) VALUES
@@ -1200,7 +1210,7 @@ INSERT INTO `loai_thu_chi` (`id_loaithuchi`, `Loai`, `TenLoai`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lop_hoc`
+-- Table structure for table `lop_hoc`
 --
 
 CREATE TABLE `lop_hoc` (
@@ -1223,7 +1233,7 @@ CREATE TABLE `lop_hoc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `lop_hoc`
+-- Dumping data for table `lop_hoc`
 --
 
 INSERT INTO `lop_hoc` (`id_lop`, `MaLop`, `id_mh`, `Khoa`, `id_gv`, `da_dk`, `si_so`, `id_phonghoc`, `id_cahoc`, `ngay_thi`, `id_cathi`, `id_phongthi`, `id_gv_thi`, `trangthailop`, `GhiChu`, `thongbao`) VALUES
@@ -1237,7 +1247,7 @@ INSERT INTO `lop_hoc` (`id_lop`, `MaLop`, `id_mh`, `Khoa`, `id_gv`, `da_dk`, `si
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `mon_hoc`
+-- Table structure for table `mon_hoc`
 --
 
 CREATE TABLE `mon_hoc` (
@@ -1249,7 +1259,7 @@ CREATE TABLE `mon_hoc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `mon_hoc`
+-- Dumping data for table `mon_hoc`
 --
 
 INSERT INTO `mon_hoc` (`id_mon`, `ten_monhoc`, `gt_mh`, `hocphi`, `type`) VALUES
@@ -1260,7 +1270,7 @@ INSERT INTO `mon_hoc` (`id_mon`, `ten_monhoc`, `gt_mh`, `hocphi`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nien_khoa`
+-- Table structure for table `nien_khoa`
 --
 
 CREATE TABLE `nien_khoa` (
@@ -1275,7 +1285,7 @@ CREATE TABLE `nien_khoa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `nien_khoa`
+-- Dumping data for table `nien_khoa`
 --
 
 INSERT INTO `nien_khoa` (`id_nk`, `ten_nk`, `nam_nk`, `NgayChoDangKy`, `HanDangKy`, `NgayKhaiGiang`, `NgayKetThuc`, `trangthai_nk`) VALUES
@@ -1286,7 +1296,7 @@ INSERT INTO `nien_khoa` (`id_nk`, `ten_nk`, `nam_nk`, `NgayChoDangKy`, `HanDangK
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `phan_hoi`
+-- Table structure for table `phan_hoi`
 --
 
 CREATE TABLE `phan_hoi` (
@@ -1300,7 +1310,7 @@ CREATE TABLE `phan_hoi` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `phan_hoi`
+-- Dumping data for table `phan_hoi`
 --
 
 INSERT INTO `phan_hoi` (`id_phanhoi`, `ho_ten`, `sdt`, `mail`, `noidung`, `id_nv`, `trangthai`) VALUES
@@ -1314,7 +1324,7 @@ INSERT INTO `phan_hoi` (`id_phanhoi`, `ho_ten`, `sdt`, `mail`, `noidung`, `id_nv
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `phong_hoc`
+-- Table structure for table `phong_hoc`
 --
 
 CREATE TABLE `phong_hoc` (
@@ -1325,7 +1335,7 @@ CREATE TABLE `phong_hoc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `phong_hoc`
+-- Dumping data for table `phong_hoc`
 --
 
 INSERT INTO `phong_hoc` (`id_phong`, `Phong`, `suc_chua`, `id_ttp`) VALUES
@@ -1339,7 +1349,7 @@ INSERT INTO `phong_hoc` (`id_phong`, `Phong`, `suc_chua`, `id_ttp`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `register`
+-- Table structure for table `register`
 --
 
 CREATE TABLE `register` (
@@ -1358,7 +1368,7 @@ CREATE TABLE `register` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `register`
+-- Dumping data for table `register`
 --
 
 INSERT INTO `register` (`id`, `username`, `user_code`, `usertype`, `email`, `password`, `granduate`, `address`, `phone`, `birth`, `img`, `status`) VALUES
@@ -1380,7 +1390,7 @@ INSERT INTO `register` (`id`, `username`, `user_code`, `usertype`, `email`, `pas
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tai_lieu`
+-- Table structure for table `tai_lieu`
 --
 
 CREATE TABLE `tai_lieu` (
@@ -1395,7 +1405,7 @@ CREATE TABLE `tai_lieu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tai_lieu`
+-- Dumping data for table `tai_lieu`
 --
 
 INSERT INTO `tai_lieu` (`id_tailieu`, `TuaDe`, `TomTat`, `file`, `NgayDang`, `id_lop`, `id_nv`, `TrangThai`) VALUES
@@ -1412,7 +1422,7 @@ INSERT INTO `tai_lieu` (`id_tailieu`, `TuaDe`, `TomTat`, `file`, `NgayDang`, `id
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `thongtin_web`
+-- Table structure for table `thongtin_web`
 --
 
 CREATE TABLE `thongtin_web` (
@@ -1426,7 +1436,7 @@ CREATE TABLE `thongtin_web` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `thongtin_web`
+-- Dumping data for table `thongtin_web`
 --
 
 INSERT INTO `thongtin_web` (`stt`, `logo`, `GioLam`, `Facebook`, `Youtube`, `Hotline`, `Lienhe`) VALUES
@@ -1435,7 +1445,7 @@ INSERT INTO `thongtin_web` (`stt`, `logo`, `GioLam`, `Facebook`, `Youtube`, `Hot
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `thong_bao_nb`
+-- Table structure for table `thong_bao_nb`
 --
 
 CREATE TABLE `thong_bao_nb` (
@@ -1450,7 +1460,7 @@ CREATE TABLE `thong_bao_nb` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `thong_bao_nb`
+-- Dumping data for table `thong_bao_nb`
 --
 
 INSERT INTO `thong_bao_nb` (`id_tbnb`, `tua_de`, `noi_dung`, `ngay_tbnb`, `loai_tbnb`, `id_nv_tb`, `id_nv_nhan`, `ten_nv_nhan`) VALUES
@@ -1466,7 +1476,7 @@ INSERT INTO `thong_bao_nb` (`id_tbnb`, `tua_de`, `noi_dung`, `ngay_tbnb`, `loai_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `thu_chi`
+-- Table structure for table `thu_chi`
 --
 
 CREATE TABLE `thu_chi` (
@@ -1487,20 +1497,17 @@ CREATE TABLE `thu_chi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `thu_chi`
+-- Dumping data for table `thu_chi`
 --
 
 INSERT INTO `thu_chi` (`id_thuchi`, `NgayThang`, `ThuChi`, `NoiDung`, `SoTienThu`, `SoTienChi`, `LuyKe`, `GhiChu`, `Nam`, `Thang`, `Quy`, `loai`, `id_nv`, `id_hd_thanhtoan`) VALUES
-(184, '2022-04-03', 'Chi', 'Chi phí', 0, 5000000, '-5000000', '111', '2022', '04', '2', 2, 2, 0),
-(186, '2022-04-04', 'Chi', 'Chi phí', 0, 5000000, '-5000000', '', '2022', '04', '2', 3, 2, 0),
-(196, '2022-04-09', 'Thu', 'Thu học phí học viên Kim Chi - Mã Học Viên: HV-8733059', 7000000, 0, '7000000', '', '2022', '04', '2', 7, 2, 77),
-(197, '2022-04-09', 'Thu', 'Thu học phí học viên Khang Hồ - Mã Học Viên: HV-1456518', 5000000, 0, '5000000', '', '2022', '04', '2', 7, 2, 78),
-(198, '2022-04-09', 'Chi', 'Chi phí', 0, 5000000, '-5000000', '111', '2022', '04', '2', 5, 2, NULL);
+(217, '2022-04-23', 'Thu', 'Thu học phí học viên Kim Chi - Mã Học Viên: HV-8733059', 7000000, 0, '7000000', NULL, '2022', '04', '2', 7, 0, 104),
+(218, '2022-04-23', 'Thu', 'Thu học phí học viên Kim Chi - Mã Học Viên: HV-8733059', 7000000, 0, '7000000', NULL, '2022', '04', '2', 7, 0, 105);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tinh_trang_phong`
+-- Table structure for table `tinh_trang_phong`
 --
 
 CREATE TABLE `tinh_trang_phong` (
@@ -1509,7 +1516,7 @@ CREATE TABLE `tinh_trang_phong` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tinh_trang_phong`
+-- Dumping data for table `tinh_trang_phong`
 --
 
 INSERT INTO `tinh_trang_phong` (`id_ttp`, `TinhTrangPhong`) VALUES
@@ -1519,7 +1526,7 @@ INSERT INTO `tinh_trang_phong` (`id_ttp`, `TinhTrangPhong`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tin_tuc`
+-- Table structure for table `tin_tuc`
 --
 
 CREATE TABLE `tin_tuc` (
@@ -1535,7 +1542,7 @@ CREATE TABLE `tin_tuc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tin_tuc`
+-- Dumping data for table `tin_tuc`
 --
 
 INSERT INTO `tin_tuc` (`id_tt`, `TuaDe`, `TinTuc`, `NgayDang`, `url`, `ten_url`, `img_tt`, `id_nv`, `TrangThai`) VALUES
@@ -1547,7 +1554,7 @@ INSERT INTO `tin_tuc` (`id_tt`, `TuaDe`, `TinTuc`, `NgayDang`, `url`, `ten_url`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `trang_thai_lop`
+-- Table structure for table `trang_thai_lop`
 --
 
 CREATE TABLE `trang_thai_lop` (
@@ -1556,7 +1563,7 @@ CREATE TABLE `trang_thai_lop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `trang_thai_lop`
+-- Dumping data for table `trang_thai_lop`
 --
 
 INSERT INTO `trang_thai_lop` (`id_ttl`, `ten_ttl`) VALUES
@@ -1571,7 +1578,7 @@ INSERT INTO `trang_thai_lop` (`id_ttl`, `ten_ttl`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `trinh_do`
+-- Table structure for table `trinh_do`
 --
 
 CREATE TABLE `trinh_do` (
@@ -1580,7 +1587,7 @@ CREATE TABLE `trinh_do` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `trinh_do`
+-- Dumping data for table `trinh_do`
 --
 
 INSERT INTO `trinh_do` (`id_trinhdo`, `TrinhDo`) VALUES
@@ -1595,23 +1602,23 @@ INSERT INTO `trinh_do` (`id_trinhdo`, `TrinhDo`) VALUES
 (9, 'Khác');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `bo_mon`
+-- Indexes for table `bo_mon`
 --
 ALTER TABLE `bo_mon`
   ADD PRIMARY KEY (`id_bo_mon`);
 
 --
--- Chỉ mục cho bảng `ca_hoc`
+-- Indexes for table `ca_hoc`
 --
 ALTER TABLE `ca_hoc`
   ADD PRIMARY KEY (`id_ca`);
 
 --
--- Chỉ mục cho bảng `chi_tiet_lop_hoc`
+-- Indexes for table `chi_tiet_lop_hoc`
 --
 ALTER TABLE `chi_tiet_lop_hoc`
   ADD PRIMARY KEY (`id_ct_lop`),
@@ -1619,50 +1626,50 @@ ALTER TABLE `chi_tiet_lop_hoc`
   ADD KEY `lopct` (`id_lop`);
 
 --
--- Chỉ mục cho bảng `chuc_vu`
+-- Indexes for table `chuc_vu`
 --
 ALTER TABLE `chuc_vu`
   ADD PRIMARY KEY (`id_cv`);
 
 --
--- Chỉ mục cho bảng `ct_gv`
+-- Indexes for table `ct_gv`
 --
 ALTER TABLE `ct_gv`
   ADD PRIMARY KEY (`id_ctgv`);
 
 --
--- Chỉ mục cho bảng `gioi_thieu`
+-- Indexes for table `gioi_thieu`
 --
 ALTER TABLE `gioi_thieu`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `gio_thi`
+-- Indexes for table `gio_thi`
 --
 ALTER TABLE `gio_thi`
   ADD PRIMARY KEY (`id_giothi`);
 
 --
--- Chỉ mục cho bảng `history`
+-- Indexes for table `history`
 --
 ALTER TABLE `history`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `history_action`
+-- Indexes for table `history_action`
 --
 ALTER TABLE `history_action`
   ADD PRIMARY KEY (`id_act`);
 
 --
--- Chỉ mục cho bảng `hoa_don`
+-- Indexes for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
   ADD PRIMARY KEY (`id_hd`),
   ADD KEY `id_hs_hoadon` (`id_hs`);
 
 --
--- Chỉ mục cho bảng `hoa_don_ct`
+-- Indexes for table `hoa_don_ct`
 --
 ALTER TABLE `hoa_don_ct`
   ADD PRIMARY KEY (`id_cthd`),
@@ -1670,19 +1677,19 @@ ALTER TABLE `hoa_don_ct`
   ADD KEY `id_lop_ct` (`id_lop_ct_hd`);
 
 --
--- Chỉ mục cho bảng `loai_tb`
+-- Indexes for table `loai_tb`
 --
 ALTER TABLE `loai_tb`
   ADD PRIMARY KEY (`id_loai_tb`);
 
 --
--- Chỉ mục cho bảng `loai_thu_chi`
+-- Indexes for table `loai_thu_chi`
 --
 ALTER TABLE `loai_thu_chi`
   ADD PRIMARY KEY (`id_loaithuchi`);
 
 --
--- Chỉ mục cho bảng `lop_hoc`
+-- Indexes for table `lop_hoc`
 --
 ALTER TABLE `lop_hoc`
   ADD PRIMARY KEY (`id_lop`),
@@ -1695,39 +1702,39 @@ ALTER TABLE `lop_hoc`
   ADD KEY `gv_thi` (`id_gv_thi`);
 
 --
--- Chỉ mục cho bảng `mon_hoc`
+-- Indexes for table `mon_hoc`
 --
 ALTER TABLE `mon_hoc`
   ADD PRIMARY KEY (`id_mon`),
   ADD KEY `loaimh` (`type`);
 
 --
--- Chỉ mục cho bảng `nien_khoa`
+-- Indexes for table `nien_khoa`
 --
 ALTER TABLE `nien_khoa`
   ADD PRIMARY KEY (`id_nk`);
 
 --
--- Chỉ mục cho bảng `phan_hoi`
+-- Indexes for table `phan_hoi`
 --
 ALTER TABLE `phan_hoi`
   ADD PRIMARY KEY (`id_phanhoi`);
 
 --
--- Chỉ mục cho bảng `phong_hoc`
+-- Indexes for table `phong_hoc`
 --
 ALTER TABLE `phong_hoc`
   ADD PRIMARY KEY (`id_phong`);
 
 --
--- Chỉ mục cho bảng `register`
+-- Indexes for table `register`
 --
 ALTER TABLE `register`
   ADD PRIMARY KEY (`id`),
   ADD KEY `chucvu` (`usertype`);
 
 --
--- Chỉ mục cho bảng `tai_lieu`
+-- Indexes for table `tai_lieu`
 --
 ALTER TABLE `tai_lieu`
   ADD PRIMARY KEY (`id_tailieu`),
@@ -1735,242 +1742,242 @@ ALTER TABLE `tai_lieu`
   ADD KEY `id_nv_tailieu` (`id_nv`);
 
 --
--- Chỉ mục cho bảng `thongtin_web`
+-- Indexes for table `thongtin_web`
 --
 ALTER TABLE `thongtin_web`
   ADD PRIMARY KEY (`stt`);
 
 --
--- Chỉ mục cho bảng `thong_bao_nb`
+-- Indexes for table `thong_bao_nb`
 --
 ALTER TABLE `thong_bao_nb`
   ADD PRIMARY KEY (`id_tbnb`),
   ADD KEY `nvtb` (`id_nv_tb`);
 
 --
--- Chỉ mục cho bảng `thu_chi`
+-- Indexes for table `thu_chi`
 --
 ALTER TABLE `thu_chi`
   ADD PRIMARY KEY (`id_thuchi`),
   ADD KEY `nv_thuchi` (`id_nv`);
 
 --
--- Chỉ mục cho bảng `tinh_trang_phong`
+-- Indexes for table `tinh_trang_phong`
 --
 ALTER TABLE `tinh_trang_phong`
   ADD PRIMARY KEY (`id_ttp`);
 
 --
--- Chỉ mục cho bảng `tin_tuc`
+-- Indexes for table `tin_tuc`
 --
 ALTER TABLE `tin_tuc`
   ADD PRIMARY KEY (`id_tt`),
   ADD KEY `nv_tt` (`id_nv`);
 
 --
--- Chỉ mục cho bảng `trang_thai_lop`
+-- Indexes for table `trang_thai_lop`
 --
 ALTER TABLE `trang_thai_lop`
   ADD PRIMARY KEY (`id_ttl`);
 
 --
--- Chỉ mục cho bảng `trinh_do`
+-- Indexes for table `trinh_do`
 --
 ALTER TABLE `trinh_do`
   ADD PRIMARY KEY (`id_trinhdo`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `bo_mon`
+-- AUTO_INCREMENT for table `bo_mon`
 --
 ALTER TABLE `bo_mon`
   MODIFY `id_bo_mon` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT cho bảng `ca_hoc`
+-- AUTO_INCREMENT for table `ca_hoc`
 --
 ALTER TABLE `ca_hoc`
   MODIFY `id_ca` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT cho bảng `chi_tiet_lop_hoc`
+-- AUTO_INCREMENT for table `chi_tiet_lop_hoc`
 --
 ALTER TABLE `chi_tiet_lop_hoc`
   MODIFY `id_ct_lop` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
--- AUTO_INCREMENT cho bảng `chuc_vu`
+-- AUTO_INCREMENT for table `chuc_vu`
 --
 ALTER TABLE `chuc_vu`
   MODIFY `id_cv` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
--- AUTO_INCREMENT cho bảng `ct_gv`
+-- AUTO_INCREMENT for table `ct_gv`
 --
 ALTER TABLE `ct_gv`
   MODIFY `id_ctgv` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT cho bảng `gioi_thieu`
+-- AUTO_INCREMENT for table `gioi_thieu`
 --
 ALTER TABLE `gioi_thieu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `gio_thi`
+-- AUTO_INCREMENT for table `gio_thi`
 --
 ALTER TABLE `gio_thi`
   MODIFY `id_giothi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT cho bảng `history`
+-- AUTO_INCREMENT for table `history`
 --
 ALTER TABLE `history`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=889;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=901;
 
 --
--- AUTO_INCREMENT cho bảng `history_action`
+-- AUTO_INCREMENT for table `history_action`
 --
 ALTER TABLE `history_action`
   MODIFY `id_act` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT cho bảng `hoa_don`
+-- AUTO_INCREMENT for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
-  MODIFY `id_hd` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id_hd` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
--- AUTO_INCREMENT cho bảng `hoa_don_ct`
+-- AUTO_INCREMENT for table `hoa_don_ct`
 --
 ALTER TABLE `hoa_don_ct`
-  MODIFY `id_cthd` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id_cthd` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
--- AUTO_INCREMENT cho bảng `loai_tb`
+-- AUTO_INCREMENT for table `loai_tb`
 --
 ALTER TABLE `loai_tb`
   MODIFY `id_loai_tb` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `loai_thu_chi`
+-- AUTO_INCREMENT for table `loai_thu_chi`
 --
 ALTER TABLE `loai_thu_chi`
   MODIFY `id_loaithuchi` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT cho bảng `lop_hoc`
+-- AUTO_INCREMENT for table `lop_hoc`
 --
 ALTER TABLE `lop_hoc`
   MODIFY `id_lop` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
--- AUTO_INCREMENT cho bảng `mon_hoc`
+-- AUTO_INCREMENT for table `mon_hoc`
 --
 ALTER TABLE `mon_hoc`
   MODIFY `id_mon` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
--- AUTO_INCREMENT cho bảng `nien_khoa`
+-- AUTO_INCREMENT for table `nien_khoa`
 --
 ALTER TABLE `nien_khoa`
   MODIFY `id_nk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT cho bảng `phan_hoi`
+-- AUTO_INCREMENT for table `phan_hoi`
 --
 ALTER TABLE `phan_hoi`
   MODIFY `id_phanhoi` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT cho bảng `phong_hoc`
+-- AUTO_INCREMENT for table `phong_hoc`
 --
 ALTER TABLE `phong_hoc`
   MODIFY `id_phong` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT cho bảng `register`
+-- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
--- AUTO_INCREMENT cho bảng `tai_lieu`
+-- AUTO_INCREMENT for table `tai_lieu`
 --
 ALTER TABLE `tai_lieu`
   MODIFY `id_tailieu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
--- AUTO_INCREMENT cho bảng `thongtin_web`
+-- AUTO_INCREMENT for table `thongtin_web`
 --
 ALTER TABLE `thongtin_web`
   MODIFY `stt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `thong_bao_nb`
+-- AUTO_INCREMENT for table `thong_bao_nb`
 --
 ALTER TABLE `thong_bao_nb`
   MODIFY `id_tbnb` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT cho bảng `thu_chi`
+-- AUTO_INCREMENT for table `thu_chi`
 --
 ALTER TABLE `thu_chi`
-  MODIFY `id_thuchi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
+  MODIFY `id_thuchi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=219;
 
 --
--- AUTO_INCREMENT cho bảng `tinh_trang_phong`
+-- AUTO_INCREMENT for table `tinh_trang_phong`
 --
 ALTER TABLE `tinh_trang_phong`
   MODIFY `id_ttp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `tin_tuc`
+-- AUTO_INCREMENT for table `tin_tuc`
 --
 ALTER TABLE `tin_tuc`
   MODIFY `id_tt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT cho bảng `trang_thai_lop`
+-- AUTO_INCREMENT for table `trang_thai_lop`
 --
 ALTER TABLE `trang_thai_lop`
   MODIFY `id_ttl` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT cho bảng `trinh_do`
+-- AUTO_INCREMENT for table `trinh_do`
 --
 ALTER TABLE `trinh_do`
   MODIFY `id_trinhdo` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `chi_tiet_lop_hoc`
+-- Constraints for table `chi_tiet_lop_hoc`
 --
 ALTER TABLE `chi_tiet_lop_hoc`
   ADD CONSTRAINT `id_hs_chitietlophoc` FOREIGN KEY (`id_hs`) REFERENCES `register` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `lopct` FOREIGN KEY (`id_lop`) REFERENCES `lop_hoc` (`id_lop`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `hoa_don`
+-- Constraints for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
   ADD CONSTRAINT `id_hs_hoadon` FOREIGN KEY (`id_hs`) REFERENCES `register` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `hoa_don_ct`
+-- Constraints for table `hoa_don_ct`
 --
 ALTER TABLE `hoa_don_ct`
   ADD CONSTRAINT `ct_id_hd` FOREIGN KEY (`id_hoadon`) REFERENCES `hoa_don` (`id_hd`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `id_lop_ct` FOREIGN KEY (`id_lop_ct_hd`) REFERENCES `lop_hoc` (`id_lop`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lop_hoc`
+-- Constraints for table `lop_hoc`
 --
 ALTER TABLE `lop_hoc`
   ADD CONSTRAINT `cahoc` FOREIGN KEY (`id_cahoc`) REFERENCES `ca_hoc` (`id_ca`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1979,38 +1986,32 @@ ALTER TABLE `lop_hoc`
   ADD CONSTRAINT `phonghoc` FOREIGN KEY (`id_phonghoc`) REFERENCES `phong_hoc` (`id_phong`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `mon_hoc`
+-- Constraints for table `mon_hoc`
 --
 ALTER TABLE `mon_hoc`
   ADD CONSTRAINT `loaimh` FOREIGN KEY (`type`) REFERENCES `bo_mon` (`id_bo_mon`);
 
 --
--- Các ràng buộc cho bảng `register`
+-- Constraints for table `register`
 --
 ALTER TABLE `register`
   ADD CONSTRAINT `chucvu` FOREIGN KEY (`usertype`) REFERENCES `chuc_vu` (`id_cv`);
 
 --
--- Các ràng buộc cho bảng `tai_lieu`
+-- Constraints for table `tai_lieu`
 --
 ALTER TABLE `tai_lieu`
   ADD CONSTRAINT `id_nv_tailieu` FOREIGN KEY (`id_nv`) REFERENCES `register` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tailieu_lop_duyet` FOREIGN KEY (`id_lop`) REFERENCES `lop_hoc` (`id_lop`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `thong_bao_nb`
+-- Constraints for table `thong_bao_nb`
 --
 ALTER TABLE `thong_bao_nb`
   ADD CONSTRAINT `nvtb` FOREIGN KEY (`id_nv_tb`) REFERENCES `register` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `thu_chi`
---
-ALTER TABLE `thu_chi`
-  ADD CONSTRAINT `id_nv_thuchi` FOREIGN KEY (`id_nv`) REFERENCES `register` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Các ràng buộc cho bảng `tin_tuc`
+-- Constraints for table `tin_tuc`
 --
 ALTER TABLE `tin_tuc`
   ADD CONSTRAINT `nv_tt` FOREIGN KEY (`id_nv`) REFERENCES `register` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
